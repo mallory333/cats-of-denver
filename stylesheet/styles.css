@@ -92,7 +92,9 @@ body.dark {
   background: linear-gradient(135deg, #1f1f1f 0%, #2c2c2c 100%) !important;
   color: #eaeaea;
 }
-
+body.dark main.container header h1 {
+  color: #ddd;
+}
 body.dark .links a {
   background-color: #444;
   color: #eaeaea;
