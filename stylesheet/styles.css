@@ -1,0 +1,120 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f4ef;
+  background: linear-gradient(135deg, #f8f4ef 0%, #c8c6c1 100%);
+  color: #333;
+  padding: 1.5rem;
+  cursor: url('../img/paw.png') 16 16, auto;
+}
+
+a {
+  cursor: url('../img/paw.png') 16 16, auto;
+}
+
+/* Container */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInScale 0.8s ease forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: #2f352e;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Links */
+.links a {
+  display: block;
+  background-color: #f5f3f1;
+  color: #3e3e3e;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+ 
+}
+#themeToggle {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  background-color: #989693;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: url('../img/paw.png') 16 16, auto;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+#themeToggle:hover {
+  background-color: #575655;
+}
+
+/* Dark Theme Styles */
+body.dark {
+  background: linear-gradient(135deg, #1f1f1f 0%, #2c2c2c 100%) !important;
+  color: #eaeaea;
+}
+
+body.dark .links a {
+  background-color: #444;
+  color: #eaeaea;
+}
+
+body.dark .links a:hover {
+  background-color: #555;
+}
+
+body.dark footer a {
+  color: #bbb;
+}
+
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+footer a {
+  color: #999;
+  text-decoration: underline;
+}

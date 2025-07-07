@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cats of Denver</title>
+    <link rel="stylesheet" href="stylesheet/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <img src="img/thecats.jpg" alt="Cats of Denver" class="avatar" />
+        <h1>@catsofdenver</h1>
+        <p>Three cats living in the big city — chaos, cuddles, and catnip.</p>
+      </header>
+
+      <section class="links">
+        <a href="https://tiktok.com/@catsofdenver" target="_blank">🎵 TikTok</a>
+        <a href="#" target="_blank">📷 Instagram (Coming Soon)</a>
+        <a href="#" target="_blank">🛍️ Shop (Coming Soon)</a>
+        <a href="mailto:mallorypr@gmail.com">📧 Contact</a>
+
+        <button id="themeToggle">🌙 Dark Mode</button>
+      </section>
+
+      <footer>
+        <p>
+          Made by Mallory •
+          <a
+            href="https://www.upwork.com/freelancers/~01837c64e35f077f77?mp_source=share"
+            target="_blank"
+            >View My Work</a
+          >
+        </p>
+      </footer>
+    </main>
+
+    <script>
+      const toggleBtn = document.getElementById("themeToggle");
+      const body = document.body;
+
+      // Optional: Remember user's theme with localStorage
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+        toggleBtn.textContent = "☀️ Light Mode";
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          toggleBtn.textContent = "☀️ Light Mode";
+          localStorage.setItem("theme", "dark");
+        } else {
+          toggleBtn.textContent = "🌙 Dark Mode";
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
+  </body>
+</html>
